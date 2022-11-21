@@ -38,7 +38,9 @@ class ExpensesController < ApplicationController
 
   def update
     @expense.update(expenses_params)
-    redirect_to root_path
+    if @expense.save
+      redirect_to root_path
+    end
   end
 
   def destroy
