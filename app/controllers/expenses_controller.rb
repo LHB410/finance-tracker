@@ -19,6 +19,9 @@ class ExpensesController < ApplicationController
 
   end
 
+  def show
+  end
+
   def new
     @expense = Expense.new
   end

@@ -12,7 +12,7 @@
       <td><%= expense.name %></td>
       <td><%= expense.amount %></td>
       <td><%= expense.category %></td>
-      <td><%= link_to 'Edit/', edit_expense_path(expense) %><%= link_to "Delete", expense_path(expense), method: :delete, data: {:confirm => 'Are you sure?'}  %></td>
+      <td><%= link_to 'Edit', edit_expense_path(expense) %><%= button_to "Delete", expense_path(expense), method: :delete, data: { turbo_method: :delete, :turbo_confirm => 'Are you sure?' }  %></td>
     </tr>
   <% end %>
   <tr>
@@ -22,4 +22,3 @@
 <h1>You have <%= @total %> left after outgoing expenses </h1>
 
 <%= render 'expenses/new', expense: @expense %>
-
