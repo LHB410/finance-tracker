@@ -1,0 +1,6 @@
+<%= simple_form_for :expense, url: edit_expense_path do |f| %>
+  <%= f.input :amount %>
+  <%= f.input :name %>
+  <%= f.input :category, as: :select, collection: ["Incoming", "Outgoing"], prompt: 'Select Category' %>
+  <%= f.submit %>
+<% end %>

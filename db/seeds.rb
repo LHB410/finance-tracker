@@ -12,24 +12,24 @@ Expense.destroy_all
 out1 = Expense.create!(
   name: "Internet",
   amount: 4000,
-  category: "outgoing")
+  category: "Outgoing")
 
 in1 = Expense.create!(
   name: "Salary (after tax)",
   amount: 187000,
-  category: 'incoming'
+  category: 'Incoming'
 )
 
 out2 = Expense.create!(
   name: "Rent",
   amount: 78000,
-  category: "outgoing"
+  category: "Outgoing"
 )
 
 in2 = Expense.create!(
   name: "Salary (after tax)",
   amount: 213000,
-  category: 'incoming'
+  category: 'Incoming'
 )
 
 
