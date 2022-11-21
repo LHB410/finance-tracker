@@ -1,5 +1,5 @@
 class ExpensesController < ApplicationController
-  before_action :set_expenses , only: [:show, :edit, :update, :destroy]
+  before_action :set_expenses, only: [:show, :edit, :update, :destroy]
 
   def index
     outgoing_amount = []
