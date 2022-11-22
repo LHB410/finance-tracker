@@ -7,6 +7,7 @@ div {
   font-weight: 200;
   text-align: center;
   width: 100%;
+  gap: 20px;
 }
 
 table{
@@ -14,13 +15,14 @@ table{
   display: flex;
   width: fit-content;
 
+  .table-btn {
+    display: flex;
+  }
+
   td, th {
     border: 0.5px solid grey;
     padding: 8px;
     font-size: 14px;
-    .btn{
-      padding: 16px 8px;
-    }
   }
 }
 
@@ -29,15 +31,19 @@ table{
   display: flex;
   flex-direction: column;
   gap: 8px;
-  width: 100%;
+  width: 80%;
 
   input{
     width: 100%;
+    height: 28px;
+
+    .btn{
+      padding: 16px 8px;
+      color: pink;
+    }
   }
 
-  .btn{
-    padding: 16px 8px;
-  }
+
 }
 
 @media (min-width: $mobile-breakpoint){
