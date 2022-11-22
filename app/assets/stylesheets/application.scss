@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+/* */
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import 'index';
+@import 'variables';
+
+html{
+  font-family: 'Quicksand', sans-serif;
+  -ms-text-size-adjust: 100%;
+  // Removes overscroll behavior
+  overscroll-behavior: none;
+}
+

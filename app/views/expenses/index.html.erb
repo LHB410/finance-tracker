@@ -1,24 +1,34 @@
-<h1>Let's track our finances</h1>
+<div class="body-wrapper">
+  <div class="title">
+    <h1>Let's track our finances</h1>
+  </div>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Amount</th>
-    <th>Category</th>
-    <th>Edit/Delete</th>
-  </tr>
-  <% @expenses.each do |expense| %>
-    <tr>
-      <td><%= expense.name %></td>
-      <td><%= expense.amount %></td>
-      <td><%= expense.category %></td>
-      <td><%= link_to 'Edit', edit_expense_path(expense) %><%= button_to "Delete", expense_path(expense), method: :delete, data: { turbo_method: :delete, :turbo_confirm => 'Are you sure?' }  %></td>
-    </tr>
-  <% end %>
-  <tr>
-    <td></td>
-  </tr>
-</table>
-<h1>You have <%= @total %> left after outgoing expenses </h1>
+  <div>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Amount</th>
+        <th>Category</th>
+        <th>Edit/Delete</th>
+      </tr>
+      <% @expenses.each do |expense| %>
+        <tr>
+          <td><%= expense.name %></td>
+          <td><%= expense.amount %></td>
+          <td><%= expense.category %></td>
+          <td><%= link_to 'Edit', edit_expense_path(expense) %><%= button_to "Delete", expense_path(expense), method: :delete, data: { "turbo-method": :delete , "turbo-confirm": "Are you sure?"}  %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
 
-<%= render 'expenses/new', expense: @expense %>
+  <div>
+    <h1>You have <%= @total %> left after outgoing expenses </h1>
+  </div>
+
+  <div>
+    <%= render 'expenses/new', expense: @expense %>
+  </div>
+
+</div>
+

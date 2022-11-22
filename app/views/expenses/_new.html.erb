@@ -4,5 +4,5 @@
   <%= f.input :name %>
   <%= f.input :amount %>
   <%= f.input :category, as: :select, collection: ["Incoming", "Outgoing"], prompt: 'Select Category' %>
-  <%= f.submit %>
+  <%= f.submit class: "btn" %>
 <% end %>

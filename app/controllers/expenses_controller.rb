@@ -30,6 +30,8 @@ class ExpensesController < ApplicationController
     @expense = Expense.new(expenses_params)
     if @expense.save
       redirect_to root_path
+    else
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -40,12 +42,14 @@ class ExpensesController < ApplicationController
     @expense.update(expenses_params)
     if @expense.save
       redirect_to root_path
+    else
+      render :edit, status: :unprocessable_entity
     end
   end
 
   def destroy
     @expense.destroy
-    redirect_to root_path
+    redirect_to root_path, status: :see_other
   end
 
   private
