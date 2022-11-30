@@ -3,6 +3,6 @@
 <%= simple_form_for :expense, url: expenses_path, method: :post do |f| %>
   <%= f.input :name %>
   <%= f.input :amount %>
-  <%= f.input :category, as: :select, collection: ["Incoming", "Outgoing"], prompt: 'Select Category' %>
+  <%= f.input :category, as: :select, collection: ["Incoming", "Outgoing"], prompt: 'Select Category', class:"drop-down" %>
   <%= f.submit class: "btn" %>
 <% end %>
