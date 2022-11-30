@@ -1,9 +1,9 @@
 <div class="body-wrapper">
-  <div class="title">
+  <div id="title" class="section">
     <h1>Let's track our finances</h1>
   </div>
 
-  <div>
+  <div class="section">
     <table>
       <tr>
         <th>Name</th>
@@ -13,20 +13,27 @@
       </tr>
       <% @expenses.each do |expense| %>
         <tr>
-          <td><%= expense.name %></td>
-          <td><%= expense.amount %></td>
-          <td><%= expense.category %></td>
-          <td class="table-btn"><%= link_to 'Edit', edit_expense_path(expense) %><%= button_to "Delete", expense_path(expense), method: :delete, data: { "turbo-method": :delete , "turbo-confirm": "Are you sure?"}  %></td>
+          <td><%= number_with_delimiter(expense.name) %></td>
+          <td>¥<%= number_with_delimiter(expense.amount) %></td>
+          <td><%= number_with_delimiter(expense.category) %></td>
+          <td class="table-btn">
+            <%= link_to edit_expense_path(expense) do %>
+              <i class="fa-solid fa-pen-to-square"></i>
+            <% end %>
+            <%= button_to expense_path(expense), method: :delete, data: { "turbo-method": :delete , "turbo-confirm": "Are you sure?"} do %>
+              <i class="fa-solid fa-trash-can"></i>
+            <% end %>
+          </td>
         </tr>
       <% end %>
     </table>
   </div>
 
-  <div>
+  <div class="section">
     <h1>You have ¥<%= @total %> left after outgoing expenses </h1>
   </div>
 
-  <div>
+  <div class="section">
     <%= render 'expenses/new', expense: @expense %>
   </div>
 

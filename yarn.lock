@@ -6728,7 +6728,7 @@ watchpack-chokidar2@^2.0.1:
   resolved "https://registry.npmjs.org/watchpack-chokidar2/-/watchpack-chokidar2-2.0.1.tgz"
   integrity sha512-nCFfBIPKr5Sh61s4LPpy1Wtfi0HE8isJ3d2Yb5/Ppw2P2B/3eVSEBjKfN0fmHJSK14+31KwMKmcrzs2GM4P0Ww==
   dependencies:
-    chokidar "^2.1.8"
+    chokidar "^>=3.0.0 <4.0.0"
 
 watchpack@^1.7.4:
   version "1.7.5"
@@ -6739,7 +6739,7 @@ watchpack@^1.7.4:
     neo-async "^2.5.0"
   optionalDependencies:
     chokidar "^3.4.1"
-    watchpack-chokidar2 "^2.0.1"
+    watchpack-chokidar2 ">=3.0.0 < 4.0.0"
 
 wbuf@^1.1.0, wbuf@^1.7.3:
   version "1.7.3"

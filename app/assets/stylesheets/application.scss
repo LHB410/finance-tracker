@@ -18,11 +18,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 @import 'index';
 @import 'variables';
+@import 'form';
 
 html{
   font-family: 'Quicksand', sans-serif;
   -ms-text-size-adjust: 100%;
   // Removes overscroll behavior
   overscroll-behavior: none;
+
+  body{
+    margin: 1rem 0rem 1rem 0rem;
+    background-color: $background;
+  }
 }
 
