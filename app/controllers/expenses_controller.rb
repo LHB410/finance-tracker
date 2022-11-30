@@ -15,7 +15,8 @@ class ExpensesController < ApplicationController
     incomings.each {|e|  incoming_amount << e.amount }
     @total_incoming =  incoming_amount.sum
 
-    @total = @total_incoming - @total_outgoing
+    totalled = @total_incoming - @total_outgoing
+    @total = totalled.to_fs(:delimited)
 
   end
 
