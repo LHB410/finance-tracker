@@ -29,6 +29,7 @@ table{
   border-collapse: collapse;
   table-layout: fixed;
   width: 100%;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 
   tr {
     border-top: dashed 2px;
@@ -52,6 +53,7 @@ table{
     justify-content: space-around;
     gap: 8px;
     padding-right: 0rem;
+    text-shadow: none;
 
     button{
       background: (rgba($dark-blue, 1) );
@@ -61,6 +63,7 @@ table{
     .fa-solid{
       font-size: 2rem;
       color: $light-blue;
+      -webkit-text-stroke: 1px $blue;
     }
   }
 }
