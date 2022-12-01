@@ -20,6 +20,8 @@
 @import 'variables';
 @import 'form';
 @import 'table';
+@import 'nav';
+@import 'footer';
 
 html{
   font-family: 'Quicksand', sans-serif;
@@ -28,8 +30,9 @@ html{
   overscroll-behavior: none;
 
   body{
-    margin: 1rem 0rem 1rem 0rem;
+    margin: 0rem;
     background-color: $background;
+    min-height: calc(100vh - 7rem)
   }
 }
 

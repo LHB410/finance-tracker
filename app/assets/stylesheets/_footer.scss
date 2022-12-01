@@ -1,0 +1,35 @@
+@import 'variables';
+.content{
+  min-height: calc(90vh - 7rem);
+
+  .section{
+    margin: 3rem 1rem 1rem 1rem;
+  }
+}
+
+footer{
+  width: 100%;
+  height: 7rem;
+  background-color: $blue;
+  bottom: 0px;
+}
+
+.footer-text{
+  font-size: 2rem;
+  color: $light-blue;
+  gap: 0.3rem;
+  margin: 1rem 1rem 0rem 1rem;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  a{
+    text-decoration: none;
+    transition: ease-in-out 0.3s;
+  }
+
+  a:hover{
+    color: $light-green;
+  }
+}

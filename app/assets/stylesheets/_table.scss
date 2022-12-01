@@ -38,8 +38,14 @@ table{
 
     .fa-solid{
       font-size: 2rem;
-      color: $light-blue;
-      -webkit-text-stroke: 1px $blue;
+
+      &.edit{
+        color: $light-green;
+      }
+
+      &.delete{
+        color: $red;
+      }
     }
   }
 }
@@ -63,6 +69,10 @@ table{
     .table-btn{
       justify-content: flex-start;
       gap: 3rem;
+
+       .fa-solid{
+        font-size: 3rem;
+       }
     }
   }
 }

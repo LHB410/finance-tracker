@@ -1,5 +1,10 @@
 @import 'variables';
 
+.body-wrapper{
+  margin-bottom: 10rem;
+  min-height: calc(100vh - 7rem)
+}
+
 div {
   display: flex;
   flex-direction: column;
@@ -16,6 +21,7 @@ h1{
 .title{
   font-size: 3rem;
   text-align: left;
+  width: 60%;
 }
 
 .section{
@@ -29,20 +35,34 @@ h1{
   border: 1px solid $blue;
 }
 
-#header{
+.section_w_img{
   flex-direction: row;
   justify-content: center;
+  gap: 0rem;
 
   img{
     height: 10rem;
   }
 }
 
-
+#total-amount{
+  text-align: center;
+}
 
 
 @media (min-width: $mobile-breakpoint){
   .section{
     width: 60vw;
   }
+
+  .section_w_img{
+    gap: 3rem;
+
+    .title{
+      width: fit-content;
+      text-align: center;
+    }
+  }
+
+
 }
