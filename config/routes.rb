@@ -3,4 +3,9 @@ Rails.application.routes.draw do
   # root 'expenses#index'
   root 'expenses#index'
   resources :expenses
+  devise_scope :user do
+    # Redirests signing out users back to sign-in
+    get "users", to: "devise/sessions#new"
+  end
+  devise_for :users
 end

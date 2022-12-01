@@ -1,0 +1,44 @@
+<div class="navbar">
+  <nav class="navbar-items">
+    <div class="navbar-link nav-brand">
+      <%= link_to "My Finance Tracker", root_path %>
+    </div>
+    <div class="navbar-link" id="navbar-link-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
+
+  <%# RIGHT HAND SIDE %>
+  <nav class="navbar-items navbar-items-right" id="collapse">
+  <% if user_signed_in? %>
+    <div class="nav-link">
+      <%# BUY ME COFFEE BUTTON %>
+      <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="laurabrookx" data-color="#7daa5e" data-font="Poppins" data-emoji="🍙"  data-text="Buy me some Onigiri" data-outline-color="#000000" data-font-color="#1B262C" data-coffee-color="#FFDD00" ></script>
+    </div>
+    <div class="nav-link">
+      <%= button_to destroy_user_session_path, class:'btn', method: :delete, data: { "turbo-method": :delete } do %>
+        Logout
+      <% end %>
+    </div>
+  <% else %>
+    <div class="nav-link">
+      <%= link_to "Sign in", new_user_session_path %>
+    </div>
+  <% end %>
+  </nav>
+</div>
+
+<script>
+  const target = document.getElementById('collapse');
+
+  const trigger = document.getElementById('navbar-link-toggle');
+
+  trigger.addEventListener('click', function handleClick() {
+    if (target.style.display === 'none') {
+      target.style.display = 'flex';
+    } else {
+      target.style.display = 'none';
+    }
+  });
+
+</script>
