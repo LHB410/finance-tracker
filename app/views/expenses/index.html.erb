@@ -1,6 +1,7 @@
 <div class="body-wrapper">
-  <div id="title" class="section">
-    <h1>Let's track our finances</h1>
+  <div class="section" id="header">
+    <h1 class="title">Let's track our finances</h1>
+    <%= image_tag('finance.svg') %>
   </div>
 
   <div class="section">
@@ -30,7 +31,7 @@
   </div>
 
   <div class="section">
-    <h1>You have ¥<%= @total %> left after outgoing expenses </h1>
+    <h1 class="title">You have ¥<%= @total %> left after outgoing expenses </h1>
   </div>
 
   <div class="section">

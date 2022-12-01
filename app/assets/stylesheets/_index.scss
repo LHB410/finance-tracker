@@ -13,6 +13,11 @@ h1{
   text-shadow: 4px 3px $blue;
 }
 
+.title{
+  font-size: 3rem;
+  text-align: left;
+}
+
 .section{
   background-color: rgba($dark-blue, 1);
   border-radius: 1rem;
@@ -24,74 +29,20 @@ h1{
   border: 1px solid $blue;
 }
 
-table{
-  border-spacing: 0em;
-  border-collapse: collapse;
-  table-layout: fixed;
-  width: 100%;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+#header{
+  flex-direction: row;
+  justify-content: center;
 
-  tr {
-    border-top: dashed 2px;
-  }
-
-  th{
-    text-align: left;
-  }
-
-  td:first-of-type{
-    padding-left: 0px;
-  }
-
-  td, th {
-    padding: 1rem;
-    font-size: 1rem;
-  }
-
-  .table-btn {
-    display: flex;
-    justify-content: space-around;
-    gap: 8px;
-    padding-right: 0rem;
-    text-shadow: none;
-
-    button{
-      background: (rgba($dark-blue, 1) );
-      border: none;
-    }
-
-    .fa-solid{
-      font-size: 2rem;
-      color: $light-blue;
-      -webkit-text-stroke: 1px $blue;
-    }
+  img{
+    height: 10rem;
   }
 }
+
+
 
 
 @media (min-width: $mobile-breakpoint){
   .section{
     width: 60vw;
-
-    table{
-      text-align: left;
-
-      td:first-of-type{
-        padding-left: 1rem;
-      }
-
-      th {
-        font-size: 2rem;
-      }
-
-      td {
-        font-size: 1.5rem;
-      }
-
-      .table-btn{
-        justify-content: flex-start;
-        gap: 3rem;
-      }
-    }
   }
 }
