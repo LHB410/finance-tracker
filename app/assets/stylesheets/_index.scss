@@ -9,6 +9,10 @@ div {
   gap: 20px;
 }
 
+h1{
+  text-shadow: 4px 3px $blue;
+}
+
 .section{
   background-color: rgba($dark-blue, 1);
   border-radius: 1rem;
@@ -16,6 +20,8 @@ div {
   padding: 1rem;
   margin: auto;
   width: 90vw;
+  outline: 1px solid $blue;
+  border: 1px solid $blue;
 }
 
 table{
@@ -30,6 +36,10 @@ table{
 
   th{
     text-align: left;
+  }
+
+  td:first-of-type{
+    padding-left: 0px;
   }
 
   td, th {
@@ -57,10 +67,28 @@ table{
 
 
 @media (min-width: $mobile-breakpoint){
-  table{
-     td, th {
-      font-size: 18px;
+  .section{
+    width: 60vw;
+
+    table{
+      text-align: left;
+
+      td:first-of-type{
+        padding-left: 1rem;
+      }
+
+      th {
+        font-size: 2rem;
+      }
+
+      td {
+        font-size: 1.5rem;
+      }
+
+      .table-btn{
+        justify-content: flex-start;
+        gap: 3rem;
+      }
     }
   }
-
 }

@@ -1,8 +1,11 @@
-<h1>Edit your expense</h1>
+<div class="section">
+  <h1>Edit your expense</h1>
 
-<%= simple_form_for @expense, url: expense_path(@expense) do |f| %>
-  <%= f.input :amount %>
-  <%= f.input :name %>
-  <%= f.input :category, as: :select, collection: ["Incoming", "Outgoing"], prompt: 'Select Category' %>
-  <%= f.submit 'Save' class: "btn" %>
-<% end %>
+  <%= simple_form_for @expense, url: expense_path(@expense) do |f| %>
+    <%= f.input :amount %>
+    <%= f.input :name %>
+    <%= f.input :category, as: :select, collection: ["Incoming", "Outgoing"], prompt: 'Select Category' %>
+    <%= f.submit 'Save', class: "btn" %>
+  <% end %>
+</div>
+
