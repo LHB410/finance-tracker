@@ -3,16 +3,16 @@
 .navbar{
   background-color: $blue;
   display: flex;
-  padding: 16px;
+  padding: 1rem;
   flex-direction: column;
-  margin-bottom: 2rem;
-  height: 7rem;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+  border-bottom: $light-blue 1px solid;
 
   nav{
     width: 100%;
     position: sticky;
     background-color: $blue;
-    margin-bottom: 1rem;
     top: 0px;
   }
   .navbar-items.navbar-items-right{
@@ -20,29 +20,93 @@
     justify-content: flex-start;
     flex-direction: column;
     gap: 3rem;
-    width: calc(100% + 2rem);
+    width: 100%;
+    align-items: flex-start;
+
+    .btn{
+      background-color: $dark-blue;
+      border: 1px solid $dark-blue;
+      color: $light-blue;
+      font-size: 18px;
+      font-family: "Quicksand", sans-serif;
+      font-weight: 700;
+      padding: 1rem 2rem 1rem 2rem;
+      height: 60px;
+      border-radius: 12px;
+      transition: ease-in-out 0.2s;
+    }
+
+    .btn:hover{
+      background-color: $light-green;
+      color: $white;
+      border: $blue;
+    }
 
     .bmc-btn{
+      border: 1px solid $dark-blue;
+      font-size: 18px;
+      width: 100%;
       transition: ease-in-out 0.2s;
 
       .bmc-btn-text{
         font-family: "Quicksand", sans-serif;
+        margin: 0px 8px 0px 0px;
       }
     }
 
-
-    .bmc-btn:hover, .bmc-btn:active, .bmc-btn:focus{
-      background-color: $blue;
+    .bmc-btn:hover, .bmc-btn:active, .bmc-btn:focus {
+      text-decoration: none;
+      cursor: pointer;
+      background-color: $light-green !important;
+      color: $white;
+      border: $blue;
     }
   }
 
   .navbar-items {
     display:flex;
     justify-content: space-between;
+    height: 100%;
+    align-items: center;
+
+    .nav-brand{
+      text-decoration: none;
+
+      .fa-solid {
+        font-weight: 900;
+        font-size: 60px;
+        color: $background;
+        transition: ease-in-out 0.2s;
+      }
+
+      .fa-solid:hover{
+        color: $light-green;
+      }
+    }
 
     #navbar-link-toggle {
       cursor: pointer;
+
+      .fa-bars{
+        font-size: 60px;
+        color: $background;
+        transition: ease-in-out 0.2s;
+      }
+
+      .fa-bars:hover{
+        color: $light-green;
+      }
     }
+  }
+
+
+  #collapse.navbar-items.navbar-items-right {
+    width: calc(100% + 3rem);
+    height: fit-content;
+    border-top: $light-blue 1px solid;
+    padding-left: 4rem;
+    padding-top: 1rem;
+    row-gap: 2rem;
   }
 }
 
@@ -50,10 +114,11 @@
   .navbar{
     flex-direction: row;
 
-    .navbar-items.navbar-items-right{
+    #collapse.navbar-items.navbar-items-right{
       display: flex;
       justify-content: flex-end;
       flex-direction: row;
+      border-top: none;
     }
 
     #navbar-link-toggle{

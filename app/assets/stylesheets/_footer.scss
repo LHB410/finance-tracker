@@ -29,11 +29,13 @@ footer{
     transition: ease-in-out 0.3s;
   }
 
+  a:hover{
+    color: $light-green;
+  }
+
   a:visited{
     color: $light-blue
   }
 
-  a:hover{
-    color: $light-green;
-  }
+
 }
