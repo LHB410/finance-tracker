@@ -1,43 +1,52 @@
-<div class="body-wrapper">
-  <div class="section section_w_img">
-    <h1 class="title">Let's track our finances</h1>
-    <%= image_tag('finance.svg') %>
-  </div>
 
-  <div class="section">
-    <table>
-      <tr>
-        <th>Name</th>
-        <th>Amount</th>
-        <th>Category</th>
-        <th>Edit/Delete</th>
-      </tr>
-      <% @expenses.each do |expense| %>
+
+<% if user_signed_in? %>
+  <div class="body-wrapper">
+    <div class="section section_w_img">
+      <h1 class="title">Hello <%= current_user.first_name %> Let's track our finances</h1>
+      <%= image_tag('finance.svg') %>
+    </div>
+
+    <div class="section">
+      <table>
         <tr>
-          <td><%= number_with_delimiter(expense.name) %></td>
-          <td>¥<%= number_with_delimiter(expense.amount) %></td>
-          <td><%= number_with_delimiter(expense.category) %></td>
-          <td class="table-btn">
-            <%= link_to edit_expense_path(expense) do %>
-              <i class="fa-solid fa-pen-to-square edit"></i>
-            <% end %>
-            <%= button_to expense_path(expense), method: :delete, data: { "turbo-method": :delete , "turbo-confirm": "Are you sure?"} do %>
-              <i class="fa-solid fa-trash-can delete"></i>
-            <% end %>
-          </td>
+          <th>Name</th>
+          <th>Amount</th>
+          <th>Category</th>
+          <th>Edit/Delete</th>
         </tr>
-      <% end %>
-    </table>
+        <% @expenses.each do |expense| %>
+          <tr>
+            <td><%= number_with_delimiter(expense.name) %></td>
+            <td>¥<%= number_with_delimiter(expense.amount) %></td>
+            <td><%= number_with_delimiter(expense.category) %></td>
+            <td class="table-btn">
+              <%= link_to edit_expense_path(expense) do %>
+                <i class="fa-solid fa-pen-to-square edit"></i>
+              <% end %>
+              <%= button_to expense_path(expense), method: :delete, data: { "turbo-method": :delete , "turbo-confirm": "Are you sure?"} do %>
+                <i class="fa-solid fa-trash-can delete"></i>
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+
+    <div class="section section_w_img">
+      <h1 class="title">You have ¥<%= @total %> left after outgoing expenses </h1>
+      <%= image_tag('wallet.svg', class:'wallet') %>
+    </div>
+
+    <div class="section">
+      <%= render 'expenses/new', expense: @expense %>
+    </div>
+
   </div>
 
-  <div class="section section_w_img">
-    <h1 class="title">You have ¥<%= @total %> left after outgoing expenses </h1>
-    <%= image_tag('wallet.svg', class:'wallet') %>
+<% else %>
+  <div class="cta">
+    hello
   </div>
-
-  <div class="section">
-    <%= render 'expenses/new', expense: @expense %>
-  </div>
-
-</div>
+<% end %>
 

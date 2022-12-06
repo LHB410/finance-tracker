@@ -35,6 +35,9 @@
       border-radius: 12px;
       transition: ease-in-out 0.2s;
     }
+    .btn.btn-dark{
+      background-color: $background;
+    }
 
     .btn:hover{
       background-color: $light-green;
@@ -119,6 +122,10 @@
       justify-content: flex-end;
       flex-direction: row;
       border-top: none;
+    }
+
+    .nav-link{
+      flex-direction: row;
     }
 
     #navbar-link-toggle{
