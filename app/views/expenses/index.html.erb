@@ -17,9 +17,9 @@
         </tr>
         <% @expenses.each do |expense| %>
           <tr>
-            <td><%= number_with_delimiter(expense.name) %></td>
+            <td><%= expense.name %></td>
             <td>¥<%= number_with_delimiter(expense.amount) %></td>
-            <td><%= number_with_delimiter(expense.category) %></td>
+            <td><%= expense.category %></td>
             <td class="table-btn">
               <%= link_to edit_expense_path(expense) do %>
                 <i class="fa-solid fa-pen-to-square edit"></i>
@@ -45,8 +45,6 @@
   </div>
 
 <% else %>
-  <div class="cta">
-    hello
-  </div>
+  <%= render 'layouts/cta' %>
 <% end %>
 

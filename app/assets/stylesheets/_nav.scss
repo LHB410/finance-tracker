@@ -24,9 +24,9 @@
     align-items: flex-start;
 
     .btn{
-      background-color: $dark-blue;
-      border: 1px solid $dark-blue;
-      color: $light-blue;
+      background-color: $orange;
+      border: 1px solid $white;
+      color: $white;
       font-size: 18px;
       font-family: "Quicksand", sans-serif;
       font-weight: 700;
@@ -36,13 +36,13 @@
       transition: ease-in-out 0.2s;
     }
     .btn.btn-dark{
-      background-color: $background;
+      background-color: rgba(0,0,0,0.5);
     }
 
     .btn:hover{
       background-color: $light-green;
       color: $white;
-      border: $blue;
+      border: $light-green 2px solid;
     }
 
     .bmc-btn{

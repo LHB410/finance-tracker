@@ -1,0 +1,66 @@
+@import 'variables';
+
+.cta{
+  width: 100%;
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+  justify-content: center;
+
+  .cta-wrapper{
+    display: flex;
+    flex-direction: column;
+
+    h1{
+      font-size: 83px;
+      color: #DDEAF2;
+      margin: 0px;
+      text-align: left;
+    }
+
+    .nav-link{
+      flex-direction: row;
+      align-self: flex-start;
+
+      .btn{
+        background-color: $orange;
+        border: 2px solid $white;
+        color: $white;
+        font-size: 18px;
+        font-family: "Quicksand", sans-serif;
+        font-weight: 700;
+        padding: 1rem 2rem 1rem 2rem;
+        height: 60px;
+        border-radius: 12px;
+        transition: ease-in-out 0.2s;
+      }
+
+      .btn.btn-dark{
+        background-color: rgba(0,0,0,0.5);
+      }
+
+      .btn:hover{
+        background-color: $light-green;
+        color: $white;
+        border: $light-green 2px solid;
+      }
+    }
+  }
+
+
+
+}
+
+.icons{
+  display: grid;
+  grid-template-columns: auto auto auto;
+
+  .icon{
+    padding: 4rem;
+    height: 18rem;
+  }
+}
+
+@media (min-width: $mobile-breakpoint){
+
+}
