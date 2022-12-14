@@ -53,6 +53,10 @@
   display: flex;
   gap: 3rem;
 
+  h3{
+    color: $light-blue;
+  }
+
   .icon{
     height: 18rem;
   }
@@ -66,7 +70,7 @@
     grid-template-columns: auto auto auto;
 
     .icon{
-      padding: 4rem;
+      padding: 0rem 4rem 4rem 4rem;
       height: 18rem;
     }
   }
