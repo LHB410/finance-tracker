@@ -1,9 +1,7 @@
-
-
 <% if user_signed_in? %>
   <div class="body-wrapper">
     <div class="section section_w_img">
-      <h1 class="title">Hello <%= current_user.first_name %> Let's track our finances</h1>
+      <h1 class="title">Hello <%= current_user.first_name.capitalize %> Let's track our finances</h1>
       <%= image_tag('finance.svg') %>
     </div>
 
@@ -34,7 +32,7 @@
     </div>
 
     <div class="section section_w_img">
-      <h1 class="title">You have ¥<%= @total %> left after outgoing expenses </h1>
+      <h1 class="title" style="width:60%;">You have ¥<%= @total %> left after outgoing expenses </h1>
       <%= image_tag('wallet.svg', class:'wallet') %>
     </div>
 

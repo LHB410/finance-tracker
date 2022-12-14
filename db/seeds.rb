@@ -12,12 +12,13 @@ Expense.destroy_all
 out1 = Expense.create!(
   name: "Internet",
   amount: 4000,
-  category: "Outgoing")
+  category: "Outgoing",
+)
 
 in1 = Expense.create!(
   name: "Salary (after tax)",
   amount: 187000,
-  category: 'Incoming'
+  category: 'Incoming',
 )
 
 out2 = Expense.create!(
@@ -31,6 +32,5 @@ in2 = Expense.create!(
   amount: 213000,
   category: 'Incoming'
 )
-
 
 puts "seeds created!"

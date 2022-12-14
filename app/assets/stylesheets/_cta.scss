@@ -6,6 +6,7 @@
   background-position: center;
   background-size: cover;
   justify-content: center;
+  padding-left: 1rem;
 
   .cta-wrapper{
     display: flex;
@@ -46,21 +47,27 @@
       }
     }
   }
-
-
-
 }
 
 .icons{
-  display: grid;
-  grid-template-columns: auto auto auto;
+  display: flex;
+  gap: 3rem;
 
   .icon{
-    padding: 4rem;
     height: 18rem;
   }
 }
 
-@media (min-width: $mobile-breakpoint){
 
+
+@media (min-width: $mobile-breakpoint){
+  .icons{
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+    .icon{
+      padding: 4rem;
+      height: 18rem;
+    }
+  }
 }
